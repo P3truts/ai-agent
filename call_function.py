@@ -18,7 +18,7 @@ def call_function(function_call, verbose=False):
     else:
         output = f" - Calling function: {function_call.name}"
 
-    print(output)
+    #print(output)
 
     function_map = {
     "get_file_content": get_file_content,

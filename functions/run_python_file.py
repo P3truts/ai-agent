@@ -37,7 +37,7 @@ def run_python_file(working_directory, file_path, args=None):
 
     #print(cleaned_file_path)
     valid_target_dir = os.path.commonpath([abs_path_work_dir, cleaned_file_path]) == abs_path_work_dir
-    print(f"Result for '{file_path}' file path:")
+    #print(f"Result for '{file_path}' file path:")
 
     #print(valid_target_dir)
     if not valid_target_dir:
@@ -71,7 +71,7 @@ def run_python_file(working_directory, file_path, args=None):
             if res.returncode != 0:
                 output += f"\n\tProcesss exited with code {res.returncode}"
 
-        print(output)
+        #print(output)
         return output
     except Exception as e:
         err = f"\tError: executing Python file: {e}"

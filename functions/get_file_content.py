@@ -29,7 +29,7 @@ def get_file_content(working_directory, file_path):
 
     #print(cleaned_file_path)
     valid_target_dir = os.path.commonpath([abs_path_work_dir, cleaned_file_path]) == abs_path_work_dir
-    print(f"Result for '{file_path}' file path:")
+    #print(f"Result for '{file_path}' file path:")
 
     #print(valid_target_dir)
     if not valid_target_dir:
@@ -53,7 +53,9 @@ def get_file_content(working_directory, file_path):
                 file_content_string += f'[...File "{cleaned_file_path}" truncated at {MAX_CHARS} characters]'
             cont_len = len(file_content_string)
             #print(f"File content length: {cont_len}")
-            print(file_content_string)
+            #print(file_content_string)
+            return file_content_string
+
     except Exception as e:
         err = f"\tError: {e}"
         print(err)

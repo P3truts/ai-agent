@@ -32,7 +32,7 @@ def write_file(working_directory, file_path, content):
 
     #print(cleaned_file_path)
     valid_target_dir = os.path.commonpath([abs_path_work_dir, cleaned_file_path]) == abs_path_work_dir
-    print(f"Result for '{file_path}' file path:")
+    #print(f"Result for '{file_path}' file path:")
 
     #print(valid_target_dir)
     if not valid_target_dir:
@@ -51,7 +51,7 @@ def write_file(working_directory, file_path, content):
         with open(cleaned_file_path, "w") as f:
             f.write(content)
             msg = f"Successfully wrote to \"{file_path}\" ({len(content)} characters written)"
-            print(msg)
+            #print(msg)
             return msg
     except Exception as e:
         err = f"\tError: {e}"

@@ -30,7 +30,7 @@ def get_files_info(working_directory, directory="."):
     #print(cleaned_dir_path)
     valid_target_dir = os.path.commonpath([abs_path_work_dir, cleaned_dir_path]) == abs_path_work_dir
 
-    print(f"Result for '{directory}' directory:")
+    #print(f"Result for '{directory}' directory:")
 
     #print(valid_target_dir)
     if not valid_target_dir:
@@ -56,7 +56,9 @@ def get_files_info(working_directory, directory="."):
                 item_status = f"\t- {item}: file_size={file_size} bytes, is_dir=True"
 
             dir_items_list.append(item_status)
-        print("\n".join(dir_items_list))
+        output = "\n".join(dir_items_list)
+        #print(output)
+        return output
 
     except Exception as e:
         err = f"\tError: {e}"
